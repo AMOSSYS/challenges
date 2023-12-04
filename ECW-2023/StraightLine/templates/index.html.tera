@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wonderland</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Wonderland, by Alice</h1>
+            <div class="notform">
+                <p>You must get a token to access Wonderland</p>
+                </br>
+                <a class="button" href="/get_token">Get token</a>
+                <a class="button" href="/wonderland">Access Wonderland</a>
+            </div>
+        </div>
+    </body>
+</html>

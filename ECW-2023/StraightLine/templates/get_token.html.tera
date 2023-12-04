@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get token</title>
+         <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Get token</h1>
+            <form action="/get_token" method="post">
+                <input type="text" name="username" placeholder="Enter your username" required>
+                <button type="submit">Get token</button>
+            </form>
+        </div>
+    </body>
+</html>

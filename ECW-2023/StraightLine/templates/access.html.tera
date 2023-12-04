@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Access</title>
+         <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Wonderland</h1>
+            <form action="/wonderland" method="post">
+                <input type="text" name="username" placeholder="Enter your username" required>
+                <input type="text" name="token" placeholder="Enter your token" required>
+                <button type="submit">Access</button>
+            </form>
+        </div>
+    </body>
+</html>

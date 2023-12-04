@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Username Page</title>
+         <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Your token</h1>
+            <p>Hello <span class="username">{{ username }}</span>, this is your secret token:</p>
+            <p><span class="token">{{ token }}</span></p>
+            </br>
+            <a class="button" href="/wonderland">Access Wonderland</a>
+        </div>
+    </body>
+</html>
