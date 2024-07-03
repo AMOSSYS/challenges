@@ -9,3 +9,7 @@ This repository contains challenges made up by Amossys and write-ups.
 ## 2023
 
 - [ECW-2023](./ECW-2023/)
+
+## 2022
+
+- [ECW-2022](./ECW-2022/)

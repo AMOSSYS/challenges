@@ -1,0 +1,62 @@
+Hello !
+Are you still a crypto nut?
+My manager made a mistake (on a Friday night, can you imagine that?), and I need help.
+I enclosed the attachments with this mail.
+
+I'll buy you a beer sometime if you can help.
+
+See you!
+
+Dave
+
+-------- Forwarded Message --------
+Subject : [URGENT] Re: Crypto progress
+Date : Mon, 08 Jul 2022 18:05:49 +0200
+From : Manager <manager@fakeaddress.com>
+To : dave.lopper@fakeaddress.com
+
+I have some trouble and I really need you help.
+I deleted the original document for security (it is confidential)
+and I don't have the keys neither.
+
+I give you the file and here is the public key:
+
+File `confidential.pdf` has been encrypted using the following public key:
+Public key: 5cd2f4202d4c791ada869a78de10db729dedb30f7bd271467ba9bd32dd643f27609395b08b8603060c2dad15317d716990d3ba20b7e5896eb3c65e98e16afe957e56f509f1cc22f88e450458b9a3ee436058b1a07332d90f471e8269e2441d3d23173d8ffc75854c419c77ee10c2ab02c697016420be7bfe6353f6866284232126ce053dc6f9b5252d9f30b6c661cbd4ed88c7abf3bf0b0d
+
+I really need to retrive the file, it is urgent!
+Can you do that?
+
+
+On 08/07/2022 17:51, Dave Lopper wrote:
+> Good evening,
+> That is not how it works.
+> The recipient must generate his own keys and provide you with his public key,
+> then you use it to encrypt your data.
+> The recipied is able to find back the original document using his private key.
+>
+> Sincerely,
+> Dave
+>
+> On 08/07/2022 17:47, Manager wrote:
+>> I tested your code to encrypt a document.
+>> However, the recipient cannot decrypt.
+>> I did send him the public key, which was displayed on my screen.
+>>
+>> Sincerely
+>>
+>> On 08/07/2022 11:33, Dave Lopper wrote:
+>>> Hello,
+>>> The code works fine, but it is still in testing phase.
+>>> You can have a look with the archive in the attachment, and test it yourself.
+>>> Give me a few more days to complete the work.
+>>> 
+>>> Sincerely,
+>>> Dave Lopper
+>>>
+>>> On 08/07/2022 10:25, Manager wrote:
+>>>>
+>>>> Can you tell me the progress on the development of the code?
+>>>>
+>>>> Sincerely,
+>>>> Manager
