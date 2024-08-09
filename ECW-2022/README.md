@@ -7,3 +7,5 @@ Crypto challenges:
 - [Plane Text](./Plane_Text/)
 
 You can replay the challenges using the links above.
+
+[Write-ups](./Write-Ups/) are available.
