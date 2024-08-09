@@ -85,9 +85,13 @@ When a message made of $n$ $16$ bytes blocks $M_1, \dots, M_n$ is ciphered
 using AES-CBC with the unkown hardcoded key $k$ and initialization vector
 $\mathrm{IV}$, the resulting $16$ bytes blocks
 $C_1, \dots, C_n$ are given by 
-$$ C_1 = \mathrm{AES_k}(\mathrm{IV}\oplus M_1),$$
-$$\vdots$$
-$$ C_n = \mathrm{AES_k}(C_{n-1}\oplus M_n).$$
+```math
+\begin{align}
+C_1 &= \mathrm{AES_k}(\mathrm{IV}\oplus M_1), \\
+    & \vdots \\
+C_n &= \mathrm{AES_k}(C_{n-1}\oplus M_n).
+\end{align}
+```
 
 Since the attacker can predict the initial vector $\mathrm{IV_{predicted}}$ used
 for his next request, and knows the vector $\mathrm{IV_{admin}}$ used when the 
@@ -97,7 +101,9 @@ where $\mathrm{http\_request}$ is an HTTP request with a guess on the cookie:
 `GET <page> HTTP/1.1 cookie: <cookie guess>}` 
 
 Thus, the terms $\mathrm{IV_{predicted}}$ cancel out and the first block is
-$$ C_1 = \mathrm{AES_k}(\mathrm{IV_{admin}}\oplus \mathrm{http_{request}}). $$
+```math
+C_1 = \mathrm{AES_k}(\mathrm{IV_{admin}}\oplus \mathrm{http_{request}}).
+```
 Hence, the first block of $C_1$ is equal to the first block obtained by the
 administrator if, and only if the first $16$ bytes of $\mathrm{http\_request}$ 
 coincide with the first $16$ bytes of the administrator. Similarly, the first
