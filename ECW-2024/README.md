@@ -7,7 +7,7 @@ You can replay the challenges using the following links:
 - [Course hipPIN](./Course_hipPIN/)
 - [Qwantik](./Qwantik/)
 
-You can access the write-ups in the folder [Write-Ups](./Write-ups/) or on [Amossys blog](https://www.amossys.fr/insights/blog-technique/european-cyber-week-2024-challenges-write-ups/).
+You can access the write-ups in the folder [Write-Ups](./Write-Ups/) or on [Amossys blog](https://www.amossys.fr/insights/blog-technique/european-cyber-week-2024-challenges-write-ups/).
 
 Original pitch of this edition:
 > Quand l’information et la manipulation de l’information deviennent essentielles à la confrontation des Etats, les câbles sous-marins, les communications satellites, les réseaux d’opérateurs mobiles et les bases de données deviennent la cible d'attaques sans précédent. La fouille des données récoltées, la cryptanalyse des fichiers sensibles chiffrés grâce aux prouesses des calculs réalisés par des supercalculateurs de plus en plus performants (technologies quantiques et HPC), sont autant de menaces pour la confidentialité et l’intégrité de ces données. La performance des algorithmes d’apprentissage automatique permet aux machines de produire des tâches complexes et de proposer à des acteurs malveillants de nouveaux outils pour mal agir au sein de nos sociétés, manipuler l’information, par exemple, et ébranler directement nos démocraties et la stabilité du monde.
