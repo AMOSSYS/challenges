@@ -62,13 +62,12 @@ client challenge (16 bytes) || username || "server"
 The client proof is calculated as the encryption of the following payload:
 
 ```
-server challenge (16 bytes) || username || \"client\"
+server challenge (16 bytes) || username || "client"
 ```
 
 The encryption algorithm is AES in CTS (ciphertext stealing) mode.
 
-Let $K$ the secret key associated to user *AbyssOverlord* and
-$E_{K}(block)$ the encryption of one block with the secret key.
+Let $K$ the secret key associated to user *AbyssOverlord* and $E_K({\rm block})$ the encryption of one block with the secret key.
 
 Then, the payload is constituted of three blocks:
 
@@ -106,19 +105,19 @@ The main modifications of the server proof to achieve that are:
 Supposong the client challenge is composed only of zero bytes, then a
 forged proof can be constructed as follows:
 - ${\rm IV}_{\rm new} = {\rm IV} \oplus {\rm CS}$
-- ${C_1}_{\rm new} = C_1$
-- ${C_2}_{\rm new} = C_1$
-- ${C_3}_{\rm new} = ({\rm IV\ truncated\ to\ the\ first\ six\ bytes}) \oplus {\rm "client"}$
+- $C_{1,{\rm new}} = C_1$
+- $C_{2,{\rm new}} = C_1$
+- $C_{3,{\rm new}} = ({\rm IV\ truncated\ to\ the\ first\ six\ bytes}) \oplus {\rm "client"}$
 
 When the server decrypts this proof (we note $D_{K}(block)$ the
 decryption of one block):
-- First block: $D_K\left( {C_1}_{\rm new} \right) \oplus {\rm IV}_{\rm new} = {\rm CS}$
+- First block: $D_K\left( C_{1,{\rm new}} \right) \oplus {\rm IV}_{\rm new} = {\rm CS}$
 - Last block:
-  - Decryption of penultimate block: $D_{K}({C_2}_{\rm new}) = {\rm IV}$
-  - Since ${C_{3}}_{new}$ is 6 bytes long, the last 10 bytes of previously decrypted block (those are the last bytes of the original $\rm IV$) are taken to complete ${C_3}_{\rm new}$ to form a full block which is:
+  - Decryption of penultimate block: $D_{K}(C_{2,{\rm new}}) = {\rm IV}$
+  - Since $C_{3,{\rm new}}$ is 6 bytes long, the last 10 bytes of previously decrypted block (those are the last bytes of the original $\rm IV$) are taken to complete $C_{3,{\rm new}}$ to form a full block which is:
   ${\rm IV} \oplus ({\rm "client"\ padded\ with\ zero\ bytes})$
-  - This block is XORed with the decryption of ${C_2}_{\rm new}$ and we get "client" padded with zero bytes
-  - Since ${C_3}_{\rm new}$ is 6 bytes long, only the first 6 bytes are taken: "client".
+  - This block is XORed with the decryption of $C_{2,{\rm new}}$ and we get "client" padded with zero bytes
+  - Since $C_{3,{\rm new}}$ is 6 bytes long, only the first 6 bytes are taken: "client".
 
 This is a valid proof, since the server does not validate the username that is expected between the server challenge and the suffix "client".
 
