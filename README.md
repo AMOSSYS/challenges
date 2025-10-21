@@ -2,6 +2,10 @@
 
 This repository contains challenges made up by Amossys and write-ups.
 
+## 2025
+
+- [ECW-2025](./ECW-2025/)
+
 ## 2024
 
 - [ECW-2024](./ECW-2024/)
