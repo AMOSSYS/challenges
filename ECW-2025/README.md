@@ -7,4 +7,4 @@ You can replay the challenges using the following links:
 - [The Silent Packets](./The_Silent_Packets/)
 - [Learning from error](./Learning_from_error/)
 
-You can access the write-ups in the folder [Write-Ups](./Write-Ups/).
+You can access the write-ups in the folder [Write-Ups](./Write-Ups/) or on the Amossys [blog](https://www.amossys.fr/insights/blog-technique/european-cyber-week-2025-challenges-write-ups/).
