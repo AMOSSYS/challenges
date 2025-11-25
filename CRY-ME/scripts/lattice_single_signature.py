@@ -6,6 +6,8 @@ from base64 import b64decode as b64d
 # Custom implementation of elliptic curves in Python
 from ec import *
 
+VERBOSE = False
+
 curve = CurveJac(CURVES['wei25519'])
 n = curve.order
 
@@ -72,16 +74,33 @@ def find_key(r, s, curve, pubkey):
             found = True
             if Q[1] == -pubkey[1]:
                 privkey = -privkey
+            if VERBOSE:
+                print(f'Row: {M[i]}')
             return privkey
     return None
 
 if __name__ == '__main__':
-    argc = len(sys.argv) - 1
+    argv = []
+    for arg in sys.argv[1:]:
+        if arg == '-v':
+            VERBOSE = True
+        else:
+            argv += [arg]
+    argc = len(argv)
     if argc != 2:
-        print('Please write the public key and signature in base64')
+        print('Please write the public key and signature in hexadecimal or base64')
         sys.exit()
 
-    pubkey_bytes = b64d(sys.argv[1])
+    try:
+        pubkey_bytes = bytes.fromhex(argv[0])
+    except:
+        pubkey_bytes = b64d(argv[0])
+    
+    try:
+        sig_bytes = bytes.fromhex(argv[1])
+    except:
+        sig_bytes = b64d(argv[1])
+    
     xq = int.from_bytes(pubkey_bytes[:32], 'big')
     yq = int.from_bytes(pubkey_bytes[32:], 'big')
     if not curve.is_on_curve((xq, yq)):
@@ -89,7 +108,6 @@ if __name__ == '__main__':
         sys.exit()
     pubkey = curve.field(xq), curve.field(yq)
 
-    sig_bytes = b64d(sys.argv[2])
     r = int.from_bytes(sig_bytes[:32], 'big')
     s = int.from_bytes(sig_bytes[32:], 'big')
     
